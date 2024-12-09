@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './ToDoloo/_utils/firebase';
+import { auth } from './_utils/firebase';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -31,14 +31,14 @@ export default function Home() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="border border-gray-300 rounded px-3 py-2 mb-2 text-black"
+                    className="border border-gray-300 rounded px-3 py-2 mb-2"
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="border border-gray-300 rounded px-3 py-2 mb-2 text-black"
+                    className="border border-gray-300 rounded px-3 py-2 mb-2"
                 />
                 <button type="submit" className="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded">
                     Sign In
